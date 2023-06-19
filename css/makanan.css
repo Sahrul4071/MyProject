@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --red:#ff3838;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0;
+  outline: none;
+  text-decoration: none;
+  transition:all .2s linear;
+}
+
+*::selection{
+  background:var(--red);
+  color:#000;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body{
+  background:#f7f7f7;
+}
+
+section{
+  padding:2rem 9%;
+}
+
+.wave{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.test{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn{
+  display: inline-block;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--red);
+  color:var(--red);
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  top:0; right: 0;
+  width:0%;
+  height:100%;
+  background:var(--red);
+  transition: .3s linear;
+  z-index: -1;
+}
+
+.btn:hover::before{
+  width:100%;
+  left: 0;
+}
+
+.btn:hover{
+  color:#000;
+}
+
+header{
+  position: fixed;
+  top:0; left: 0; right:0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:#fff;
+  padding:2rem 9%;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color:#666;
+}
+
+header .logo i{
+  padding-right: .5rem;
+  color:var(--red);
+}
+
+header .navbar a{
+  font-size: 2rem;
+  margin-left: 2rem; 
+}
+
+header .navbar a:hover{
+  color:var(--red);
+}
+
+header .navbar ul {
+  margin: -5px;
+  padding: 0px;
+  background: none;
+  display: block;
+  float: right;
+}
+
+header .navbar ul li {
+  list-style: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+header .navbar ul li a {
+  display: block;
+  text-decoration: block;
+  padding: 5px;
+  color: #222;
+}
+
+header .navbar ul li a:hover {
+  display: flex;
+  color: var(--red);
+}
+
+ .navbar ul li .dropdown {
+  display: none;
+}
+
+.navbar ul li:hover .dropdown {
+  display: inline-block;
+  background: none;
+  position: absolute;
+  padding: 0px;
+}
+
+.navbar ul li:hover .dropdown li  {
+  display: block;
+}
+
+.navbar ul li:hover .dropdown li a {
+  padding: .1rem 1rem;
+  border-radius: .1rem solid;
+  margin-bottom: 0px;
+}
+
+.navbar ul li:hover .dropdown li a:hover {
+  background: none;
+  color: flex;
+}
+
+.navbar #sig-in:hover .dropdown {
+  background: #000;
+  color: var(--red);
+}
+
+.navbar a.tbl-biru {
+  font-size: 25px;
+  background: #000;
+  border:.2rem solid var(--red);
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 5px 10px 5px 10px;
+  color:var(--red);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar a.tbl-biru:hover {
+  background: var(--red);
+  border:.2rem solid var(--red);
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown .sig-in {
+  display: inline-block;
+  border:.2rem solid var(--red);
+  background: #000;
+  outline: inline-block;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  color:var(--red);
+  cursor: pointer;
+}
+
+.dropdown .sig-in:hover {
+  background: #000;
+  border:.2rem solid var(--red);
+  color: var(--red);
+  text-decoration: none;
+}
+
+.footer{
+  background:#000;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer .share{
+  display: flex;
+  gap:1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer .credit{
+  padding:1.3rem 1rem;
+  color:#fff;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.footer .credit span{
+  color:var(--red);
+}
+
+#scroll-top{
+  position: fixed;
+  top:-120%;
+  right:2rem;
+  padding:.5rem 1.5rem;
+  font-size: 4rem;
+  background:var(--red);
+  color:#000;
+  border-radius: .5rem;
+  transition: 1s linear;
+  z-index: 1000;
+}
+
+#scroll-top.active{
+  top:calc(100% - 12rem)
+}
+
+.loader-container{
+  position: fixed;
+  top:0; left:0;
+  z-index: 10000;
+  background:#FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  width:100%;
+}
+
+.loader-container.fade-out{
+  top:-120%;
+}
